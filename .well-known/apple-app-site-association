@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["W6BMC8LJ3F.com.puzapp.puz", "W6BMC8LJ3F.com.puzapp.puz.dev"],
+        "components": [
+          { "/": "/e/*", "comment": "Événement public, par son code" },
+          { "/": "/u/*", "comment": "Profil d'un joueur (ajouter en ami)" },
+          { "/": "/get", "comment": "Télécharger / ouvrir Puz" }
+        ]
+      }
+    ]
+  }
+}
