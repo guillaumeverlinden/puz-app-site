@@ -25,6 +25,14 @@
   #redirect { display: none; color: var(--muted); font-size: 14px; margin: 0 0 16px; }
   .btn { display: block; text-decoration: none; border-radius: 14px; padding: 14px 16px; font-weight: 700; font-size: 16px; margin-bottom: 10px; }
   .store { background: var(--blue); color: #fff; }
+  .promo { display: flex; align-items: center; gap: 12px; text-align: left; text-decoration: none; color: var(--ink);
+           border: 1px solid rgba(112,72,232,.35); border-radius: 14px; padding: 12px; margin-top: 18px; }
+  .promo-icon { width: 44px; height: 44px; border-radius: 12px; background: #7048E8; display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+  .promo-text { flex: 1; display: flex; flex-direction: column; font-size: 14px; color: var(--muted); }
+  .promo-text strong { color: var(--ink); font-size: 15px; }
+  .promo-soon { font-size: 12px; font-weight: 700; color: #7048E8; background: rgba(112,72,232,.12); border-radius: 8px; padding: 3px 8px; }
+  .foot { margin: 18px 0 0; font-size: 13px; color: var(--muted); }
+  .foot a { color: var(--muted); }
   #open { color: var(--blue); background: transparent; border: 1.5px solid var(--blue); }
 </style>
 </head>
@@ -40,6 +48,12 @@
     <a class="btn store" id="android" href="https://play.google.com/store/apps/details?id=com.puzapp.puz">Google Play</a>
   </div>
   <a class="btn" id="open" href="puzapp://get">Puz</a>
+  <a class="promo" id="promo" href="#">
+    <span class="promo-icon" aria-hidden="true">🧊</span>
+    <span class="promo-text"><strong>Merge 3D</strong><span id="promo-pitch">Our next puzzle game, in 3D.</span></span>
+    <span class="promo-soon" id="promo-soon">Soon</span>
+  </a>
+  <p class="foot"><a id="legal" href="/en/">Privacy &amp; terms</a> · <a href="mailto:puzapp.contact@gmail.com">Contact</a></p>
 </main>
 <script src="/redirect.js"></script>
 </body>

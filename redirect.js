@@ -89,6 +89,35 @@
     appPath = 'u/' + encodeURIComponent(value);
   }
 
+  // Promotion de Merge 3D (pas encore sorti : « Bientôt disponible »).
+  // 👉 À la sortie, remplir ces liens (et les mêmes dans src/lib/crossPromo.ts de l'app).
+  var MERGE3D = { ios: '', android: '' };
+  var PROMO = {
+    fr: { pitch: 'Notre prochain jeu de réflexion, en 3D.', soon: 'Bientôt', get: 'Découvrir' },
+    en: { pitch: 'Our next puzzle game, in 3D.', soon: 'Soon', get: 'Discover' },
+    es: { pitch: 'Nuestro próximo juego de lógica, en 3D.', soon: 'Pronto', get: 'Descubrir' },
+    pt: { pitch: 'O nosso próximo jogo de lógica, em 3D.', soon: 'Em breve', get: 'Descobrir' },
+  };
+  var promo = document.getElementById('promo');
+  if (promo) {
+    var pl = PROMO[lang] || PROMO.en;
+    var uaP = navigator.userAgent || '';
+    var mergeUrl = /Android/i.test(uaP) ? MERGE3D.android : MERGE3D.ios || MERGE3D.android;
+    document.getElementById('promo-pitch').textContent = pl.pitch;
+    document.getElementById('promo-soon').textContent = mergeUrl ? pl.get : pl.soon;
+    if (mergeUrl) promo.href = mergeUrl;
+    else promo.addEventListener('click', function (e) { e.preventDefault(); });
+  }
+
+  // Lien vers les conditions légales, dans la langue du visiteur.
+  var LEGAL = { fr: 'Confidentialité et conditions', en: 'Privacy & terms', es: 'Privacidad y condiciones', pt: 'Privacidade e termos' };
+  var legalLang = T[lang] ? lang : 'en';
+  var legalLink = document.getElementById('legal');
+  if (legalLink) {
+    legalLink.href = '/' + legalLang + '/';
+    legalLink.textContent = LEGAL[legalLang];
+  }
+
   function el(id) {
     return document.getElementById(id);
   }
