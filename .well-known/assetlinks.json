@@ -1,10 +1,14 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.puzapp.puz",
-      "sha256_cert_fingerprints": ["REMPLACER_PAR_L_EMPREINTE_SHA256_ANDROID"]
+      "sha256_cert_fingerprints": [
+        "05:49:E9:66:65:B8:DA:1A:7C:D2:B0:02:52:0C:11:3E:37:DA:7E:84:B3:34:35:DE:13:03:43:6D:7D:F3:FB:D0"
+      ]
     }
   }
 ]
